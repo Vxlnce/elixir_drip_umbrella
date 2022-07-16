@@ -20,7 +20,8 @@ config :elixir_drip,
 #
 # For production it's recommended to configure a different adapter
 # at the `config/runtime.exs`.
-config :elixir_drip, ElixirDrip.Mailer, adapter: Swoosh.Adapters.Local
+config :elixir_drip, ElixirDrip.Mailer, adapter: Swoosh.Adapters.Local,
+storage_provider: ElixirDrip.Storage.Providers.GoogleCloudStorageLocal
 
 # Swoosh API client is needed for adapters other than SMTP.
 config :swoosh, :api_client, false
