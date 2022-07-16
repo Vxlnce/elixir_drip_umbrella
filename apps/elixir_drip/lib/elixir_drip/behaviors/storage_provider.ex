@@ -10,7 +10,7 @@ defmodule ElixirDrip.Behaviors.StorageProvider do
     | {:error, reason, details}
 
     @callback download(path) ::
-    {:ok, :uploaded}
+    {:ok, content}
     | {:error, reason}
     | {:error, reason, details}
 end
